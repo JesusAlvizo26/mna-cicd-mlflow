@@ -15,7 +15,7 @@ mlflow.set_tracking_uri(uri="https://sharpness-equate-number.ngrok-free.dev")
 mlflow.set_experiment("wine-quality-experiment")
 
 with mlflow.start_run():
-    random_state = 2
+    random_state = 1
     model = RandomForestClassifier(n_estimators=50, random_state=random_state)
     mlflow.log_param("random_state", random_state)
     model.fit(X_train, y_train)
